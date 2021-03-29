@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    display:flex;
+    justify-content:center;
+
+    background-color:#aaa;
+}
+main {
+    max-width:100%;
+    display:flex;
+    flex-flow: column nowrap;
+    flex:0 1 1200px;
+    justify-content:center;
+
+    background-color:white;
+}
+main > header {
+    flex:0 1 150px;
+    border-bottom:1px solid #333;
+
+    display:flex;
+    flex-flow:row nowrap;
+    overflow-x: auto;
+    align-items:flex-start;
+}
+main > main {
+    flex:1 1;
+
+    display:flex;
+    justify-content:stretch;
+    align-items:stretch;
+}
+main > footer {
+    flex:0 1 150px;
+    max-height:150px;
+    border-top:1px solid #333;
+
+    display:flex;
+    flex-flow:row nowrap;
+    overflow-x: auto;
+    align-items:flex-start;
+}
+
+main > header > div {
+    flex:0 0 150px;
+    box-sizing:border-box;
+    height:100%;
+    border-right:1px solid #333;
+
+    padding:8px;
+}
+main > footer > div {
+    flex:0 0 150px;
+    box-sizing:border-box;
+    height:150px;
+    width:150px;
+    border-right:1px solid #333;
+    
+    z-index:100;
+    padding:8px;
+    user-select: none;
+    -ms-user-select: none;
+}
+.ui-draggable-dragging {
+    border:none;
+}
+.tool {
+    cursor:pointer;
+}
+.toolTab {
+    flex:1 0;
+
+    display:flex;
+    flex-flow:row nowrap;
+}
+.toolTab div {
+    flex:1 0;
+    border:1px solid black;
+
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    flex-flow:column nowrap;
+}
+.toolTab .input {
+    background-color:rgba(0,125,255, .5);
+}
+.toolTab .output {
+    background-color:rgba(255,125,0, .5);
+}
+.spacer {
+    padding:8px;
+}
+.tooltab .highlight {
+    background-color:cyan;
+}
+
+.element, .compound {
+    background-color:white;
+}
+.element .symbol, .compound .symbol {
+    text-align:center;
+    font-size:24px;
+}

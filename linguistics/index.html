@@ -1,0 +1,46 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/linguistics.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linguistics</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/linguistics.js" defer></script>
+</head>
+<body>
+    <main>
+        <section class="details">
+            <div class="detail detailWord">
+                
+            </div>
+            <div class="detail">
+                <section class="name">
+                    Options for Word
+                </section>
+                <section class="desc">
+                    <datalist id="possibleWordsList"></datalist>
+                    <input type="text" id="wordReplace" list="possibleWordsList">
+                </section>
+            </div>
+        </section>
+    </main>
+</body>
+<div id="tutorial" title="Instructions">
+    <p>
+        The creatures in this plane of existence seem to enjoy human culture,
+        so they have some English texts that have been translated into
+        their alien language. <br><br>
+        This could be our Rosetta Stone!<br>
+        Click on a word, and guess the replacement word on the right.
+        Translate the whole text to win.
+    </p>
+</div>
+<div id="victory" title="Victory" style="display:none">
+    <p>
+        Congratulations, you were able to solve the puzzle
+        and decode the alien beings' words!<br><br>
+        This will make translating the rest of their language a walk in the park.<br><br>
+        Thank you for your groundbreaking work, scientist.
+    </p>
+</div>
+</html>

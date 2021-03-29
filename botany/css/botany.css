@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    display:flex;
+    justify-content:center;
+    max-height:100%;
+
+    background-color:#aaa;
+}
+main {
+    display:flex;
+    flex-flow: row nowrap;
+    flex:0 1 1200px;
+    justify-content:center;
+
+    background-color:white;
+}
+main > section {
+    flex:1 1;
+    border:1px solid black;
+
+    display:flex;
+    flex-flow: column nowrap;
+}
+main > .plants {
+    justify-content:flex-start;
+    overflow-y:auto;
+}
+main > .details {
+    justify-content:stretch;
+}
+.details > canvas {
+    flex:3 1;
+}
+.details > div {
+    border-top:1px solid #333;
+    flex:1 1;
+}
+#nextGenerationContainer {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#nextGeneration {
+    font-size:24px;
+    padding:8px;
+    flex:0 1 200px;
+    border:none;
+    box-shadow:2px 2px 2px #666;
+    background-color:#3fa;
+    outline:none;
+    cursor:pointer;
+}
+#nextGeneration:active {
+    box-shadow:none;
+}
+.plants > .plant {
+    flex:0 0 200px;
+    border-bottom:1px solid #333;
+
+    display:flex;
+    flex-flow:column nowrap;
+    cursor:pointer;
+}
+.plant > .name, .detail > .name {
+    flex:0 1 24px;
+    font-size:20px;
+    box-shadow:0px 1px 1px #999;
+    padding:8px;
+}
+.plant > .desc, .detail > .desc {
+    flex: 1 1;
+    padding:8px;
+}
