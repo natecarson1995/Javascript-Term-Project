@@ -1,0 +1,41 @@
+swagger: "2.0"
+info:
+    title: RedditVideoViewer
+    description: "Get a streamable, previewable video from a reddit post"
+    version: "1.0.0"
+host: r.def.gg
+schemes:
+    - "https"
+paths:
+    "/":
+    get:
+        description: "Get the video from the vreddit id"
+        operationId: "video"
+        parameters:
+        -
+            name: vid
+            in: query
+            required: true
+            type: string
+        responses:
+        200:
+            description: "Success"
+            schema:
+                type: video/mp4
+        206:
+            description: "Partial success"
+            schema:
+                type: video/mp4
+        400:
+            description: "Failure"
+    "/v/":
+    get:
+        description: "Get the video page for a vreddit id"
+        operationId: "view"
+        responses:
+        200:
+            description: "Success"
+            schema:
+                type: text/html
+        400:
+            description: "Failure"
