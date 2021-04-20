@@ -61,7 +61,7 @@ main > footer > div {
     width:150px;
     border-right:1px solid #333;
     
-    z-index:100;
+    z-index:96;
     padding:8px;
     user-select: none;
     -ms-user-select: none;
@@ -106,4 +106,53 @@ main > footer > div {
 .element .symbol, .compound .symbol {
     text-align:center;
     font-size:24px;
+}
+.compound > .element {
+    display:none;
+}
+.reacting {
+    animation-name: brightness;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes brightness {
+    0%   {
+        filter: brightness(1) contrast(1) blur(0);
+    }
+    50% {
+        filter: brightness(1.5) contrast(1.5) blur(4px);
+    }
+    100%   {
+        filter: brightness(1) contrast(1) blur(0);
+    }
+}
+
+.ui-draggable {
+    z-index:97;
+}
+.ui-dialog {
+    background-color:white;
+    z-index:99;
+    position:absolute;
+    border:1px solid #666;
+    box-shadow:0px 1px 1px #999;
+    font-size:20px;
+}
+.ui-dialog-titlebar {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    background-color:#999;
+    padding:8px;
+}
+.ui-widget-overlay {
+    z-index:98;
+    position:absolute;
+    background-color:rgba(255,255,255,.8);
+    width:100%;
+    height:100%;
+}
+.ui-dialog-content {
+    padding:8px;
 }

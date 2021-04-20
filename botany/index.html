@@ -10,17 +10,11 @@
 <body>
     <main>
         <section class="plants">
-            <div class="plant">
-                This game is simply called "botany".<br>
-                The idea of this game is to work with your randomly generated plants<br>
-                and breed them selectively until you have created the perfect, prosperous plant.
-            </div>
         </section>
         <section class="details">
             <canvas id="canvas" width=400 height=200>
 
             </canvas>
-            <img src="media/botanylink.svg" id="botanyimg" width=400 height=200 style="display:none">
             <div class="detail" id="genotype">
                 <section class="name">Genotype</section>
                 <section class="desc"></section>
@@ -31,4 +25,21 @@
         </section>
     </main>
 </body>
+<div id="tutorial" title="Instructions">
+    <p>
+        This game is simply called "botany".<br>
+        The idea of this game is to work with your randomly generated plants<br>
+        and breed them selectively until you have created the perfect, prosperous plant.<br>
+        To do this, click two plants to breed, and hit the "next generation" button
+    </p>
+</div>
+<div id="victory" title="Victory" style="display:none">
+    <p>
+        Congratulations, you were able to get a plant<br>
+        that has an average >= 13 on each of its' characteristics!<br>
+        This plant will form a great foundation for the farms here<br>
+        and shall provide food for you and illuminate much of<br>
+        the genealogy of this place.
+    </p>
+</div>
 </html>
